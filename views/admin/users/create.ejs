@@ -1,1 +1,22 @@
-<h1>Meu formulario</h1>
+<%- include ('../../partials/header.ejs') %>
+<%- include ('../../partials/navbar.ejs') %>
+ 
+<div class="container">
+    <hr>
+    <div class="card mt-5">
+        <div class="card-header">
+          <h2>Criação de usuário</h2>
+        </div>
+        <div class="card-body">
+        <form action="/users/create" method="POST">
+            <input class="form-control" name="email" type="email" placeholder="email@exemplo.com"> <br>
+            <input class="form-control" type="password" class="form-control" name="password" placeholder="********"> <br>
+            <button type="submit" class="btn btn-success btn-block form-control">Criar</button>
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include ('../../partials/footer.ejs') %>
